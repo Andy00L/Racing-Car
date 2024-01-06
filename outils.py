@@ -19,3 +19,9 @@ def blit_centre_rotation(fenetre, image, top_gauche, angle):
     nouv_rectange = image_tourner.get_rect(center = image.get_rect(topleft = top_gauche).center)
     fenetre.blit(image_tourner, nouv_rectange.topleft)
     
+def blit_text_center(fenetre, font , text):
+    render = font.render(text, 1, (200, 200, 200))
+    fenetre.blit(render, (fenetre.get_width() / 2 - render.get_width() / 2,
+                          fenetre.get_height() / 2 - render.get_height() / 2))
+    
+
